@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import Card from "./Card";
 import Angry from "./Angry";
+import SkipAndUpload from "./SkipAndUpload";
+import Share from "./Share";
 
 const settings = {
   dots: true,
@@ -11,7 +13,7 @@ const settings = {
   slidesToScroll: 1
 };
 
-const state = [
+const captions = [
   { caption: "Naija 4 life 😍" },
   { caption: "Naija don cast 😉" },
   { caption: "Naija go dey alright 😏" },
@@ -20,26 +22,27 @@ const state = [
 ];
 
 const App = () => {
+  const [state, setState] = useState({
+    step: 0,
+    state: ""
+  });
+  const { step } = state;
+
   return (
     <div className="container__card">
       <Slider {...settings}>
-        {state.map(({ caption, emoji }, key) => (
-          <Card key={key} caption={caption} emoji={emoji} />
+        {captions.map(({ caption, emoji }, key) => (
+          <Card
+            key={key}
+            state={state.state}
+            emoji={emoji}
+            caption={caption}
+            setState={setState}
+          />
         ))}
       </Slider>
-      <div className="container__btn">
-        <button className="btn btn-secondary">Skip</button>
-        <button type="button" class="btn btn-success">
-          Upload Photo
-        </button>
-      </div>
-      <div>
-        <div className="container__share">
-          <button type="button" class="btn btn-success">
-            Share
-          </button>
-        </div>
-      </div>
+      {step === 1 && <SkipAndUpload setState={setState} />}
+      {step === 2 && <Share setState={setState} />}
     </div>
   );
 };
