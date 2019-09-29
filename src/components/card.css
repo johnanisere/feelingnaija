@@ -1,0 +1,28 @@
+.card {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.caption {
+  font-size: 1.75rem;
+  text-align: center;
+}
+.container__card {
+  max-width: 350px;
+  margin: 50px auto;
+  padding: 10px;
+}
+.container__btn {
+  margin-top: 55px;
+  display: flex;
+  justify-content: space-between;
+  transition: all 300s ease-in-out;
+}
+.container__share {
+  margin-top: 55px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
