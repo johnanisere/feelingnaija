@@ -1,27 +1,51 @@
 import React from "react";
+import db from "../utils/config";
 import "./states.css";
 
-const App = () => {
-  return (
-    <div className="card map__card">
-      <table className="table table-bordered">
-        <thead>
-          <tr>
-            <th scope="col">
-              State
-            </th>
-            <th scope="col">Highest Feeling</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr onClick={() => console.log('clicked!')}>
-            <th>Lagos</th>
-            <th>Love</th>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  );
-};
+import getHighest from "../helper/getHighest";
+
+class App extends React.Component {
+  state = {states:{}};
+  readData = () => {
+    db.ref("/states")
+    .once("value")
+    .then(snapshot => {
+      const states = snapshot.val() ? snapshot.val() : "fetching";
+      console.log(states);
+      this.setState({states});
+    });
+  }
+
+  componentDidMount() {
+    this.readData();
+  }
+  
+  render() {
+    const allStates = this.state.states;
+    console.log(allStates);
+    return (
+      <div className="card map__card">
+        <table className="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">State</th>
+              <th scope="col">Highest Feeling</th>
+            </tr>
+          </thead>
+          <tbody>
+            {console.log(Object.keys(allStates))}
+            {console.log(Object.entries(allStates))}
+            {Object.keys(allStates).map((state, key) => (
+              <tr key={key} onClick={() => console.log("clicked state " + key)}>
+                <th>{state}</th>
+                <th>{getHighest(allStates[state])}</th>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+}
 
 export default App;
