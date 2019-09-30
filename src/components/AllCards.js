@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import Card from "./Card";
 import FinalCard from "./FinalCard";
+import Table from "./Table";
+import AllStates from "./AllStates";
 
 import Share from "./Share";
 import Title from "./Title";
@@ -35,6 +37,8 @@ const App = () => {
           ))}
         </Slider>
       )}
+      <AllStates />
+      <Table />
       {step === 1 && <SkipAndUpload setState={setState}  state={state}/>}
       {step === 2 && (
         <>
