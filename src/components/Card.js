@@ -1,11 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Select from "./Select";
 import "./card.css";
 
 const App = ({ caption, emoji, setState, state, styles }) => {
-  useEffect(() => {
-    console.log({ styles });
-  }, [styles]);
   return (
     <div
       className="card"

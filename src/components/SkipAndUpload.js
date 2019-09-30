@@ -2,8 +2,10 @@ import React from "react";
 
 const App = ({ setState, state }) => {
   const proceed = () => {
+    console.log({ state });
     setState({ ...state, step: 2 });
   };
+
   const myWidget = window.cloudinary.createUploadWidget(
     {
       cloudName: "defw4xel0",
@@ -13,14 +15,14 @@ const App = ({ setState, state }) => {
       cropping: true,
       maxFileSize: 3500000,
       defaultSource: "local",
-      thumbnailTransformation: [{ width: 150, height: 150, crop: "fill" }]
+      thumbnailTransformation: [{ width: 300, height: 300, crop: "fill" }]
     },
     (error, result) => {
       if (!error && result && result.event === "success") {
         setState({
           ...state,
           step: 2,
-          style: { backgroundImage: `url(${result.info.secure_url})` }
+          style: { backgroundImage: `url(${result.info.thumbnail_url})` }
         });
       }
     }

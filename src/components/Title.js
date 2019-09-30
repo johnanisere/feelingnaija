@@ -8,6 +8,8 @@ const App = ({ step }) => {
       ? "This is how you feel about Nigeria today."
       : step === 2
       ? "Share your feelings with the world because you are not alone!"
+      : step === 3
+      ? "See how everyone else is feeling today"
       : "";
   return <h1 className="title">{text}</h1>;
 };
