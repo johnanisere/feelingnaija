@@ -41,9 +41,9 @@ const states = [
   "Zamfara"
 ];
 
-const App = ({ setState, state }) => {
+const App = ({ setState, state, number }) => {
   const onHandleChange = ({ target: { value } }) => {
-    setState({ step: 1, state: value });
+    setState({ step: 1, state: value, number });
   };
   return (
     <select className="select" onChange={onHandleChange} value={state}>
