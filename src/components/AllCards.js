@@ -37,15 +37,15 @@ const App = () => {
           ))}
         </Slider>
       )}
-      <AllStates />
-      <Table />
       {step === 1 && <SkipAndUpload setState={setState}  state={state}/>}
       {step === 2 && (
         <>
           <FinalCard {...state} />
-          <Share setState={setState} />
+          <Share state={state} setState={setState} />
         </>
       )}
+      {step === 3 && <AllStates state={state} setState={setState} />}
+      {step === 4 && <Table />}
     </div>
   );
 };
