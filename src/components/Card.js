@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Select from "./Select";
 import "./card.css";
 
-const App = ({ caption, emoji, setState, state, styles }) => {
-  useEffect(() => {
-    console.log({ styles });
-  }, [styles]);
+const App = ({ caption, emoji, setState, state, styles,number }) => {
+
   return (
     <div
       className="card"
@@ -15,7 +13,7 @@ const App = ({ caption, emoji, setState, state, styles }) => {
     >
       <p className="caption">{caption}</p>
       {emoji}
-      <Select setState={setState} state={state} />
+      <Select setState={setState} state={state} number={number} />
     </div>
   );
 };
