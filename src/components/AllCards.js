@@ -16,7 +16,8 @@ const App = () => {
     step: 0,
     state: "",
     style: {},
-    number: 0
+    number: 0,
+    activeState: {}
   });
   const { step, style } = state;
   return (
@@ -49,7 +50,7 @@ const App = () => {
         </>
       )}
       {step === 3 && <AllStates state={state} setState={setState} />}
-      {step === 4 && <Table />}
+      {step === 4 && <Table state={state.activeState} />}
     </div>
   );
 };
