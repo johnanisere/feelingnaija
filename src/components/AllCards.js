@@ -11,9 +11,10 @@ import settings from "./constants/settings";
 const App = () => {
   const [state, setState] = useState({
     step: 0,
-    state: ""
+    state: "",
+    style: {}
   });
-  const { step } = state;
+  const { step, style } = state;
 
   return (
     <div className="container__card">
@@ -22,6 +23,7 @@ const App = () => {
         {captions.map(({ caption, emoji }, key) => (
           <Card
             key={key}
+            styles={style}
             state={state.state}
             emoji={emoji}
             caption={caption}

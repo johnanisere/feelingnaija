@@ -468,6 +468,15 @@
   -webkit-animation: angry-mouth 2s ease-in infinite;
   animation: angry-mouth 2s ease-in infinite;
 }
+.emoji__img {
+  width: 120px;
+  height: 120px;
+  margin: 15px 15px 40px;
+  display: inline-block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 @-webkit-keyframes heart-beat {
   25% {

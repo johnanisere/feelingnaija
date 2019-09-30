@@ -2,15 +2,19 @@
   width: 100%;
   padding: 20px;
   margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .title {
   font-size: 1.85rem;
   text-align: center;
   margin-bottom: 30px;
+  color: #28a745;
 }
 .caption {
   font-size: 1.75rem;
   text-align: center;
+  color: #28a745;
 }
 .container__card {
   max-width: 350px;
@@ -36,6 +40,9 @@
 }
 .btn {
   padding: 0.375rem 1.75rem;
+}
+.slick-dots li.slick-active button:before {
+  color: #28a745;
 }
 @keyframes fade-in {
   from {
