@@ -5,13 +5,13 @@ import "./states.css";
 import getHighest from "../helper/getHighest";
 
 class App extends React.Component {
+
   state = {states:{}};
   readData = () => {
     db.ref("/states")
     .once("value")
     .then(snapshot => {
       const states = snapshot.val() ? snapshot.val() : "fetching";
-      console.log(states);
       this.setState({states});
     });
   }
@@ -19,10 +19,14 @@ class App extends React.Component {
   componentDidMount() {
     this.readData();
   }
+
+  handleState = () => {
+    let { state, setState } = this.props;
+    setState({...state, step: 4});
+  }
   
   render() {
     const allStates = this.state.states;
-    console.log(allStates);
     return (
       <div className="card map__card">
         <table className="table table-bordered">
@@ -33,10 +37,8 @@ class App extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {console.log(Object.keys(allStates))}
-            {console.log(Object.entries(allStates))}
             {Object.keys(allStates).map((state, key) => (
-              <tr key={key} onClick={() => console.log("clicked state " + key)}>
+              <tr key={key} onClick={this.handleState}>
                 <th>{state}</th>
                 <th>{getHighest(allStates[state])}</th>
               </tr>
