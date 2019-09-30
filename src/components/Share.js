@@ -1,5 +1,6 @@
 import React from "react";
 import htmlToImage from "html-to-image";
+import "./share.css"
 
 class App extends React.Component {
   state = {
@@ -49,6 +50,11 @@ class App extends React.Component {
     this.onProceedToCapture();
   }
 
+  handleClick = () => {
+    const {state, setState} = this.props;
+    setState({...state, step: 3});
+  }
+
   render() {
     return (
       <div className="container__share">
@@ -59,6 +65,7 @@ class App extends React.Component {
         >
           Share
         </button>
+        <span onClick={this.handleClick} className="states__table__link">See Metrics</span>
       </div>
     );
   }
