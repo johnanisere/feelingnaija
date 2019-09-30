@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import Card from "./Card";
 
-import SkipAndUpload from "./SkipAndUpload";
 import Share from "./Share";
 import Title from "./Title";
+import SkipAndUpload from "./SkipAndUpload";
 import captions from "./constants/captions";
 import settings from "./constants/settings";
 
@@ -31,8 +31,8 @@ const App = () => {
           />
         ))}
       </Slider>
-      {step === 1 && <SkipAndUpload setState={setState} />}
-      {step === 2 && <Share setState={setState} />}
+      {step === 1 && <SkipAndUpload setState={setState} state={state} />}
+      {step === 2 && <Share setState={setState} state={state} />}
     </div>
   );
 };
