@@ -6,7 +6,7 @@ const App = () => {
     <img
       width="120px"
       height="120px"
-      src="https://d1j8pt39hxlh3d.cloudfront.net/products/previews/5KFQVEM7GGWW6GPUYFNI/2306_6oK2kjXlPQ4WCQOolkCusyzzo1uGqkJL.gif"
+      src="https://res.cloudinary.com/defw4xel0/image/upload/v1569864059/emoji/smirk.gif"
       alt="Smirking face"
       title="Smirking face"
       className="mx-auto d-block emoji__img"

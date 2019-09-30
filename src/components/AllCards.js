@@ -42,8 +42,8 @@ const App = () => {
       {step === 1 && <SkipAndUpload setState={setState}  state={state}/>}
       {step === 2 && (
         <>
-          <FinalCard {...state}/>
-           <Share setState={setState} />
+          <FinalCard {...state} />
+          <Share setState={setState} />
         </>
       )}
     </div>
