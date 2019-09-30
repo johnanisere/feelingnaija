@@ -40,7 +40,10 @@ const App = () => {
       {step === 2 && (
         <>
           <FinalCard {...state} />
-          <Share setState={setState} />
+          <Share
+            setState={setState}
+            image={style ? style.backgroundImage : ""}
+          />
         </>
       )}
     </div>
