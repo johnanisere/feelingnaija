@@ -1,6 +1,6 @@
 import React from "react";
 import htmlToImage from "html-to-image";
-import "./share.css"
+import "./share.css";
 
 import request from "superagent";
 const CLOUDINARY_UPLOAD_PRESET = "d9lnb7pd";
@@ -24,7 +24,7 @@ class App extends React.Component {
       navigator
         .share({
           title: "Feeling Naija",
-          text: `How do you feel about Naija https://decagon.institute`,
+          text: `How do you feel about Naija? let the world know https://feelingnaija.com/`,
           url: this.state.dataUrl
         })
         .then(() => {
@@ -68,9 +68,9 @@ class App extends React.Component {
   };
 
   handleClick = () => {
-    const {state, setState} = this.props;
-    setState({...state, step: 3});
-  }
+    const { state, setState } = this.props;
+    setState({ ...state, step: 3 });
+  };
 
   render() {
     const { loading, dataUrl } = this.state;
@@ -97,7 +97,9 @@ class App extends React.Component {
           >
             {loading ? "Processing..." : dataUrl ? "Share" : "Initializing..."}
           </button>
-          <span onClick={this.handleClick} className="states__table__link">See Metrics</span>
+          <span onClick={this.handleClick} className="states__table__link">
+            See Metrics
+          </span>
         </div>
       </>
     );
