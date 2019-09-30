@@ -1,38 +1,67 @@
 import React from "react";
+import htmlToImage from "html-to-image";
 
-const App = ({ setState, state }) => {
-  const proceed = () => {
+class App extends React.Component {
+  state = {
+    dataUrl: ""
+  };
+
+  proceed = () => {
+    const { setState, state } = this.props;
     setState({ ...state, step: 3 });
   };
 
-  const onShare = () => {
+  onShare = () => {
     if (navigator.share) {
       navigator
         .share({
           title: "Feeling Naija",
           text: `How do you feel about Naija https://decagon.institute`,
-          url:
-            "https://res.cloudinary.com/defw4xel0/image/upload/v1569806891/feelingnaija/sdosxnpbfp1hgan0c4g9.jpg"
+          url: this.state.dataUrl
         })
         .then(() => {
-          proceed();
+          //   proceed();
         })
         .catch(error => {
           // proceed();
           console.log("Error sharing", error);
         });
     } else {
-      proceed();
+      //   proceed();
     }
   };
 
-  return (
-    <div className="container__share">
-      <button type="button" className="btn btn-success" onClick={onShare}>
-        Share
-      </button>
-    </div>
-  );
-};
+  onProceedToCapture = () => {
+    var node = document.getElementById("profile");
+
+    htmlToImage
+      .toPng(node)
+      .then(dataUrl => {
+        console.log({ dataUrl });
+        this.setState({ dataUrl });
+      })
+      .catch(function(error) {
+        console.error("oops, something went wrong!", error);
+      });
+  };
+
+  componentDidMount() {
+    this.onProceedToCapture();
+  }
+
+  render() {
+    return (
+      <div className="container__share">
+        <button
+          type="button"
+          className="btn btn-success"
+          onClick={this.onShare}
+        >
+          Share
+        </button>
+      </div>
+    );
+  }
+}
 
 export default App;

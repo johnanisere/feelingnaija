@@ -5,6 +5,7 @@ import Love from "./Love";
 import Wink from "./Wink";
 import Smirk from "./Smirk";
 import RollingEyes from "./RollingEyes";
+import Angry from "./Angry";
 
 const App = ({ level1, level2, level3, level4, level5 }) => (
   <div className="card">
@@ -45,9 +46,7 @@ const App = ({ level1, level2, level3, level4, level5 }) => (
         </tr>
         <tr>
           <th>
-            <span role="img" aria-label="Heart eyes" className="emoji__img">
-              😡
-            </span>
+            <Angry />
           </th>
           <th>{level5}</th>
         </tr>
