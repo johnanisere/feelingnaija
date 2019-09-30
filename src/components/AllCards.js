@@ -3,9 +3,9 @@ import Slider from "react-slick";
 import Card from "./Card";
 import FinalCard from "./FinalCard";
 
-import SkipAndUpload from "./SkipAndUpload";
 import Share from "./Share";
 import Title from "./Title";
+import SkipAndUpload from "./SkipAndUpload";
 import captions from "./constants/captions";
 import settings from "./constants/settings";
 

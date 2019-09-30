@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "feelingnaija-254513",
+  "private_key_id": "92a8e9206bac8a3c41c0837affc2c47cfaa2b538",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDox6pNfWWHad2P\nPd0I9PUsBL9Fx4eZFrk4u0llRBc46NUJonSHe+ihxjs9BZ+ZawoInjs9eD5yTflU\nm95kNopn6W6sRroSn6iKWMMsjsHAtzs9g5kRj4w7M8mvybfmfY/pnr6kvaV6SEn3\nw3oDuw3cPKCAGcici7CxDNBG7q8roNoFYsK/udDquuMzahpr2vLN4QU8o573RvjM\nyBh7lxbP4nkdnjlCCYagGBQTIxsgRDddS0fQ/t0+tQXSm8oeheDI/2t/qo5J+FoU\nV8ZqF1ws1rX5llgUrgOWRscuuZ0XT2opQoNZYhNkC4p3yKlzdCxrRacxuANHc/Y+\nuOKeACjdAgMBAAECggEAFWmFMT342hOGfXSgiABjkdPMXF88PXxcausfZAdDzS8g\n2ZM6ynOlZ6wgxHFnlIJgfxmlZvdQMM3nXD1yOYZvnzTwjzxHEj6v3C0wcHRscibo\nqU6y0W2Cf4RsZ8hTkdbrwMuimB8xwSVni59Mvyca4UiNli4vYk1r+8oRjO5lT2Sx\ngFClpVgJOjdedmsURErV1KuseRuXlJT7IqJL8Gja0Q4t18AEBVDfBvvks6wQF3i6\npLMIkm2lAz2+xOiEEJPRvjxonKXzLAThWLugmKDf0NVO5QrodFYlFUnuq8nTa4wK\nSkE6Vxh3u73dz+1mAwN3rK+0s4Qx6+Sjk9b1IFH7aQKBgQD0vd73gYSApp+S5Q81\nsNd9F6i3Dzol3Ay/yEGxqRq92NCk+Ky96KTTIDiuFkpbHgfqqtmK/lOBvH03ESWP\nIWhfU/z5yySgKHVoLSyiKm/xbLAUK2lugB9f2LwJKcMiO2BTkZNr/MPpSl2//zKf\nL004gN//iUv9CAHJmPsO5kdELwKBgQDzfO4p37XOryD5qw00A98sAyv5ylhoGIC1\n83YAp1/2XRkLLs0kFc0VjOVfuKGfZdvuf549EzmXF8RRTSc8qG05wXVR+xx4WXZI\nez9VMTRD5f/hhd+PtD6+btGGloxIC709kD9Y6j+8kGD/ehjwWDwsY279SOMa4eVU\nbQkeviFEswKBgQDRAODLXzjnoOO/T4vonwe3VSAIjKFsuXnNwdeQP8iNff3YFGF4\noJc5kVe2G2UOYRwDpDm5QC3SKkSIZUU88Ruv5Qqxy3CQsVxqRcHLDxCgDOBlqRkV\ne6bPdEhITvjMYAaH91b9LlOkA5UCJI53cK6yZSRlljtlb5QPNGyaMb+EkwKBgQCV\nBBeKXxSYusu2oT4CYIA8InDOfk0e4CgdszO78LOlRpLmKi14cTNDhih3LbsUn7U7\nQLVqcZKkavJGQ67Iy9eVKlYP51wkN7RRZcR78hInn+K7dkA9ZbWkvJPVB9ww16Zo\nwBhU5YA+eiozENmkdovVKsGpl+sN78R3qAeV3gzkSwKBgEUuMpc/w4uFlTm7lNYq\njlixaTmeOO7zw2E/tES2IWXf7+gSi0Z7L0jahyYqKEWnaEeTpCXzB9JHqUNpJFlS\n/tCNQ5Fj1IkHxYxxwVbu5wsvSWxjqd2+6pYX0HWupdHtqEfAZw+5oljtuYaNhAuf\n0aFx2Eaa+0GHujBrwHwSG2gH\n-----END PRIVATE KEY-----\n",
+  "client_email": "feelingnaija@feelingnaija-254513.iam.gserviceaccount.com",
+  "client_id": "104145478130750121281",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/feelingnaija%40feelingnaija-254513.iam.gserviceaccount.com"
+}

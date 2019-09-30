@@ -10,18 +10,22 @@ const App = ({ setState, state }) => {
       navigator
         .share({
           title: "Feeling Naija",
-          text: `How do you feel about Naija`,
-          url: "https://decagon.institute"
+          text: `How do you feel about Naija https://decagon.institute`,
+          url:
+            "https://res.cloudinary.com/defw4xel0/image/upload/v1569806891/feelingnaija/sdosxnpbfp1hgan0c4g9.jpg"
         })
         .then(() => {
           proceed();
         })
         .catch(error => {
-          proceed();
+          // proceed();
           console.log("Error sharing", error);
         });
+    } else {
+      proceed();
     }
   };
+
   return (
     <div className="container__share">
       <button type="button" className="btn btn-success" onClick={onShare}>
