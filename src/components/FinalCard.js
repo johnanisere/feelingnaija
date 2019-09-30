@@ -4,11 +4,11 @@ import "./card.css";
 import "./final.css";
 
 const App = ({ number, state, style }) => {
-  
-  const {caption, emoji} = captions[number];
- 
+  const { caption, static: emoji } = captions[number];
+
   return (
     <div
+      id="profile"
       className="card final__card"
       style={{
         ...style
