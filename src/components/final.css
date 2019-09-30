@@ -1,0 +1,66 @@
+.final__card {
+  box-sizing: border-box;
+  padding: 0;
+  min-height: 300px;
+  background: url(https://res.cloudinary.com/defw4xel0/image/upload/v1569806891/feelingnaija/sdosxnpbfp1hgan0c4g9.jpg);
+  background-size: cover;
+  background-position: center center;
+  border: transparent;
+  overflow: hidden;
+}
+.final__card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #106203;
+  opacity: 0.29;
+}
+.content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 150px;
+  background: #106203;
+  opacity: 0.92;
+  padding: 1rem 0.5rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.content p.state {
+  color: #fff;
+  font-size: 25px;
+  padding-top: 0.5rem;
+  font-weight: 700;
+}
+.caption__container {
+  padding: 0.5rem;
+  background: white;
+  width: 100%;
+}
+.caption__container .caption {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+.caption__container div.emoji__wrapper {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: -25px;
+  right: 0px;
+}
+.caption__container div.emoji__wrapper img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.content .site__url {
+  position: absolute;
+  bottom: 0;
+  color: #ffffff;
+  font-size: 12px;
+  margin-bottom: 0.5rem;
+}
