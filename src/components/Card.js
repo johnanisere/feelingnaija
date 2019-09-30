@@ -2,8 +2,7 @@ import React from "react";
 import Select from "./Select";
 import "./card.css";
 
-const App = ({ caption, emoji, setState, state, styles,number }) => {
-
+const App = ({ caption, emoji, setState, state, styles, number }) => {
   return (
     <div
       className="card"
