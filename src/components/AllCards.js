@@ -37,11 +37,15 @@ const App = () => {
           ))}
         </Slider>
       )}
-      {step === 1 && <SkipAndUpload setState={setState}  state={state}/>}
+      {step === 1 && <SkipAndUpload setState={setState} state={state} />}
       {step === 2 && (
         <>
           <FinalCard {...state} />
-          <Share state={state} setState={setState} />
+          <Share
+            state={state}
+            setState={setState}
+            image={style ? style.backgroundImage : ""}
+          />
         </>
       )}
       {step === 3 && <AllStates state={state} setState={setState} />}

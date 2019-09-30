@@ -14,15 +14,14 @@ class App extends React.Component {
       });
   };
 
-  proceed = () => {
+  proceed = ({ cb }) => {
     const { state, setState } = this.props;
     const level = `level${state.number + 1}`;
     const newLevel = this.state[level] + 1;
-    console.log({ ...this.state, [level]: newLevel });
     db.ref("/states/" + state.state)
       .set({ ...this.state, [level]: newLevel })
       .then(() => {
-        setState({ ...state, step: 2 });
+        cb ? cb() : setState({ ...state, step: 2 });
       })
       .catch(error => console.log({ error }));
   };
@@ -46,11 +45,13 @@ class App extends React.Component {
       },
       (error, result) => {
         if (!error && result && result.event === "success") {
-          setState({
-            ...state,
-            step: 2,
-            style: { backgroundImage: `url(${result.info.thumbnail_url})` }
-          });
+          const cb = () =>
+            setState({
+              ...state,
+              step: 2,
+              style: { backgroundImage: `url(${result.info.thumbnail_url})` }
+            });
+          this.proceed({ cb });
         }
       }
     );

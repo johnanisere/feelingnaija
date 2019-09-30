@@ -45,6 +45,11 @@
 .slick-dots li.slick-active button:before {
   color: #28a745;
 }
+.hidden {
+  position: absolute;
+  z-index: -1000;
+  opacity: 0;
+}
 @keyframes fade-in {
   from {
     opacity: 0;
