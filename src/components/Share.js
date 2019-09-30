@@ -20,8 +20,11 @@ const App = ({ setState, state }) => {
           proceed();
           console.log("Error sharing", error);
         });
+    } else {
+      proceed();
     }
   };
+
   return (
     <div className="container__share">
       <button type="button" className="btn btn-success" onClick={onShare}>
