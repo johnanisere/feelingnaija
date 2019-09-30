@@ -2,7 +2,8 @@ import React from "react";
 
 const App = ({ setState, state }) => {
   const proceed = () => {
-    setState({ ...state, step: 2 });
+    console.log({state})
+    setState({ ...state, step: 2, });
   };
   const myWidget = window.cloudinary.createUploadWidget(
     {
