@@ -1,8 +1,10 @@
 import React from "react";
 import htmlToImage from "html-to-image";
 import "./share.css";
-
 import request from "superagent";
+// import { BitlyClient } from "bitly-react";
+// const bitly = new BitlyClient("1d272349d061c5a7ef49174ff939b53ef87b7b5e", {});
+
 const CLOUDINARY_UPLOAD_PRESET = "d9lnb7pd";
 const CLOUDINARY_UPLOAD_URL =
   "https://api.cloudinary.com/v1_1/defw4xel0/image/upload";
@@ -50,8 +52,12 @@ class App extends React.Component {
           .post(CLOUDINARY_UPLOAD_URL)
           .field("upload_preset", CLOUDINARY_UPLOAD_PRESET)
           .field("file", dataUrl)
-          .then(resp => {
+          .then(async resp => {
             this.setState({ dataUrl: resp.body.secure_url });
+            // const url = await bitly.shorten(resp.body.secure_url);
+            // const url = await googl.shorten(resp.body.secure_url);
+            // console.log({ url });
+            // this.setState({ dataUrl: url });
             this.setState({ loading: false });
             return resp;
           })
