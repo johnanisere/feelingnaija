@@ -2,10 +2,7 @@ import React from "react";
 
 const App = ({ children }) => (
   <div className="container-fluid parent">
-    <div
-      className="container overflow-auto d-flex flex-column justify-content-between "
-      style={{ overflowX: "hidden" }}
-    >
+    <div className="container d-flex flex-column justify-content-between ">
       {children}
       <footer className="text-center mb-4">
         Powered by{" "}
