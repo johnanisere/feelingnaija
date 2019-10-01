@@ -32,7 +32,7 @@ class App extends React.Component {
           <thead>
             <tr>
               <th scope="col">State</th>
-              <th scope="col">Highest Feeling</th>
+              <th scope="col">Mood</th>
             </tr>
           </thead>
           <tbody>
